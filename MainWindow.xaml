@@ -1,0 +1,281 @@
+﻿<Window x:Class="Site.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Site"
+        mc:Ignorable="d"
+        Title="Insurance" Height="750" Width="800">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.75*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0,95*"/>
+            <RowDefinition Height="0,05*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <TextBlock Margin="5" Height="50" Foreground="DarkRed" FontFamily="Calibri" FontSize="36" Text="Гарант" FontWeight="Bold">
+            </TextBlock>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Головна" TextDecorations="Underline" FontFamily="Calibri" Foreground="LightGreen" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Про компанію" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Приватним особам" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Юридичним особам" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Корисна інформація" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Питання і відповіді" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Margin="5, 0, 0, 0" Text="> Контакти" TextDecorations="Underline" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold"/>
+            <Label Content="Розрахувати вартість полісу:" Margin="5, 50, 0, 0" Foreground="DarkGray"/>
+            <ComboBox Margin="5, 0, 5, 0">
+                <ComboBoxItem>Виберіть калькулятор</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Виклик агента:" Margin="5, 5, 0, 0" Foreground="DarkGray"/>
+            <ComboBox Margin="5, 0, 5, 0">
+                <ComboBoxItem>Для фізичних осіб</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Пошук" Margin="5, 5, 0, 0"/>
+            <WrapPanel>
+                <TextBox Margin="5, 0, 5, 0" Width="135" Height="21"/>
+                <Button Background="IndianRed" Content="Знайти" Foreground="White" VerticalAlignment="Center"  Height="21"/>
+            </WrapPanel>
+
+        </StackPanel>
+
+
+        <Grid Grid.Column="1" Grid.Row="0">
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="0,09*"/>
+                <RowDefinition Height="0,30*"/>
+                <RowDefinition Height="0,25*"/>
+                <RowDefinition Height="0,06*"/>
+                <RowDefinition Height="0,27*"/>
+                <RowDefinition Height="0,03*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0,90*"/>
+                    <ColumnDefinition Width="0,05*"/>
+                    <ColumnDefinition Width="0,05*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Margin="5, 15, 0, 0" Text="Ваша страхова компанія" FontFamily="Calibri" Foreground="DarkGray" FontSize="20" FontStyle="Oblique" FontWeight="Bold"/>
+                <Button Grid.Column="1" BorderBrush="Transparent" Background="Transparent" Content="UA" FontFamily="Calibri" Foreground="DarkGray" FontSize="16" FontWeight="Bold"/>
+                <Button Grid.Column="2" BorderBrush="Transparent" Background="Transparent">
+                    <Button.Content>
+                        <TextBlock FontFamily="Calibri" Foreground="DarkBlue" FontSize="16" FontWeight="Bold">
+                            <Underline>EN</Underline>
+                        </TextBlock>
+                    </Button.Content>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="Red" Margin="0, 0, 3, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0,05*"/>
+                    <ColumnDefinition Width="0,45*"/>
+                    <ColumnDefinition Width="0,45*"/>
+                    <ColumnDefinition Width="0,05*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0" Margin="5" Text="&lt;" Background="Transparent" Foreground="White" FontFamily="Calibri" FontSize="24" FontWeight="ExtraBold" VerticalAlignment="Center">
+                </TextBlock>
+                <Image Grid.Column="0" Margin="0, -1" Source="images/corner1.png" VerticalAlignment="Top"/>
+
+                <Grid Grid.Column="1" Margin="0, 7, 5, 7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0,7*"/>
+                        <RowDefinition Height="0,3*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Grid.RowSpan="2" Source="images/stadium.png"  Stretch="Fill"/>
+                    <Image Grid.Row="0" Grid.RowSpan="2" Source="images/beckham_top.png"  HorizontalAlignment="Right" />
+
+                    <Grid Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0,33*"/>
+                            <RowDefinition Height="0,67*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="WhiteSmoke">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                            </TextBlock.Background>
+                            <TextBlock.Text>Забудьте про збір документів і довідок</TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock Grid.Row="1" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="WhiteSmoke">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                            </TextBlock.Background>
+                            <TextBlock.Text>&gt;&gt; детальніше</TextBlock.Text>
+                        </TextBlock>
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Column="2" Margin="5, 7, 0, 7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0,7*"/>
+                        <RowDefinition Height="0,3*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Grid.RowSpan="2" Source="images/messi_krRonaldo.png" Stretch="Fill" />
+                    <Image Grid.Row="0" Margin="15" Source="images/g.png" Width="30" Height="30" VerticalAlignment="Top" />
+
+                    <Grid Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="WhiteSmoke">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                            </TextBlock.Background>
+                            <TextBlock.Text>Страховий випадок? Аварійний комісар</TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock Grid.Row="1" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="WhiteSmoke">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                            </TextBlock.Background>
+                            <TextBlock.Text>Гарант завжди поруч</TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock Grid.Row="2" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="WhiteSmoke">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                            </TextBlock.Background>
+                            <TextBlock.Text>&gt;&gt; детальніше</TextBlock.Text>
+                        </TextBlock>
+                    </Grid>
+
+                </Grid>
+
+                <TextBlock Grid.Column="3" Margin="5" Text="&gt;" Background="Transparent" Foreground="White" FontFamily="Calibri" FontSize="24" FontWeight="ExtraBold" VerticalAlignment="Center" HorizontalAlignment="Right">
+                </TextBlock>
+                <Image Grid.Column="3" Margin="0, 0, 0, -1" Source="images/corner2.png" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0, 10, 3, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0,333*"/>
+                    <ColumnDefinition Width="0,333*"/>
+                    <ColumnDefinition Width="0,334*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Background="Red" Margin="0, 0, 10, 0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="0,75*"/>
+                        <RowDefinition Height="0,25*"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Margin="5" Source="images/rolls_royce.png" Stretch="Fill"/>
+                    <TextBlock Grid.Row="1" Background="Transparent" Foreground="LightBlue" FontFamily="Calibri" FontSize="20" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Underline>КАСКО</Underline>
+                    </TextBlock>
+                    <Image Grid.Row="1" Margin="0, 0, 0, -1" Width="25" Source="images/corner3.png" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Background="Red" Margin="0, 0, 10, 0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="0,75*"/>
+                        <RowDefinition Height="0,25*"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Margin="5" Source="images/apartment.png" Stretch="Fill"/>
+                    <TextBlock Grid.Row="1" Background="Transparent" Foreground="LightBlue" FontFamily="Calibri" FontSize="20" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Underline>КВАРТИРА</Underline>
+                    </TextBlock>
+                    <Image Grid.Row="1" Margin="-1, 0, 0, -1" Width="25" Source="images/corner3.png" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                </Grid>
+
+                <Grid Grid.Column="2" Background="Red" Margin="0, 0, 0, 0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="0,75*"/>
+                        <RowDefinition Height="0,25*"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Margin="5" Source="images/house.png" Stretch="Fill"/>
+                    <TextBlock Grid.Row="1" Background="Transparent" Foreground="LightBlue" FontFamily="Calibri" FontSize="20" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Underline>БУДИНОК</Underline>
+                    </TextBlock>
+                    <Image Grid.Row="1" Margin="-1, 0, 0, -1" Width="25" Source="images/corner3.png" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                </Grid>
+
+            </Grid>
+            
+            <TextBlock Grid.Row="3" Background="Transparent" Text="Новини" Foreground="DarkBlue" FontFamily="Arial" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0,333*"/>
+                    <ColumnDefinition Width="0,333*"/>
+                    <ColumnDefinition Width="0,334*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock>
+                        <TextBlock Text="24" Foreground="DarkBlue" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="/4" Foreground="DarkGray" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </TextBlock>
+                    <TextBlock Text="п'ятниця" Foreground="DarkGray" FontFamily="Calibri" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock Foreground="Black" FontFamily="Calibri" FontSize="13.5" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap">
+                        В cічні 2020 року Компанія "Гарант" відкрила відділ по Страхуванню творів мистецтва, антикваріату і предметів
+                        колекціонування. На сьогоднішній день відділ вже уклав близько 15 страхових договорів
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock>
+                        <TextBlock Text="18" Foreground="DarkBlue" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="/4" Foreground="DarkGray" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </TextBlock>
+                    <TextBlock Text="субота" Foreground="DarkGray" FontFamily="Calibri" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock Foreground="Black" FontFamily="Calibri" FontSize="13.5" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap">
+                        В квітні 2020 року Компанія &lt;&lt;Гарант&gt;&gt; запустила нову рекламну кампанію, яка направлена на підтримку
+                        іміджу &lt;&lt;Гарант&gt;&gt;
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock>
+                        <TextBlock Text="9" Foreground="DarkBlue" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="/4" Foreground="DarkGray" FontFamily="Calibri" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </TextBlock>
+                    <TextBlock Text="четвер" Foreground="DarkGray" FontFamily="Calibri" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock Foreground="Black" FontFamily="Calibri" FontSize="13.5" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap">
+                         Компанія &lt;&lt;Гарант&gt;&gt; підвела попередні підсумки роботи в першому кварталі 2020 року.
+                        За перші 3 місяця роботи збори компанії в порівнянні з 2019 роком виросли на 35%
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Grid.Row="5" Background="Transparent" Foreground="DarkBlue" FontFamily="Calibri" FontWeight="SemiBold" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Underline>Всі новини</Underline>
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0,333*"/>
+                <ColumnDefinition Width="0,333*"/>
+                <ColumnDefinition Width="0,333*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Column="0" Margin="10, 10, 0, 0" FontFamily="Calibri" FontWeight="Bold" HorizontalAlignment="Left">
+                Страхова компанія &lt;&lt;Гарант&gt;&gt;
+            </TextBlock>
+            <TextBlock Grid.Column="1" Margin="0, 10, 0, 0" FontFamily="Calibri" Foreground="DarkBlue" FontWeight="Bold" HorizontalAlignment="Center" >
+                <Underline>Контакти</Underline>   <Underline>Про компанію</Underline>   <Underline>Карта сайту</Underline> 
+            </TextBlock>
+            <TextBlock Grid.Column="2" Margin="0, 10, 10, 0" FontFamily="Calibri" Foreground="DarkGray" FontWeight="Bold" HorizontalAlignment="Right" >
+                Телефон: (111) 111-11-11
+            </TextBlock>
+
+        </Grid>    
+
+    </Grid>
+
+</Window>
